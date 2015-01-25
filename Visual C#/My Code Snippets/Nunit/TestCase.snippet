@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>TestCase</Title>
+      <Author>Tanabe</Author>
+      <Description>テストケースを使ったテストメソッドのひな形を作成</Description>
+      <HelpUrl></HelpUrl>
+      <SnippetTypes />
+      <Keywords />
+      <Shortcut>tcmr</Shortcut>
+    </Header>
+    <Snippet>
+      <References />
+      <Imports />
+      <Declarations>
+        <Literal Editable="true">
+          <ID>type</ID>
+          <Type></Type>
+          <ToolTip></ToolTip>
+          <Default>type</Default>
+          <Function></Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>Name</ID>
+          <Type></Type>
+          <ToolTip></ToolTip>
+          <Default>Name</Default>
+          <Function></Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>Args</ID>
+          <Type></Type>
+          <ToolTip></ToolTip>
+          <Default>Args</Default>
+          <Function></Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>parameters</ID>
+          <Type></Type>
+          <ToolTip></ToolTip>
+          <Default>parameters</Default>
+          <Function></Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>result</ID>
+          <Type></Type>
+          <ToolTip></ToolTip>
+          <Default>true</Default>
+          <Function></Function>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp" Kind="method decl" Delimiter="$"><![CDATA[[TestCase($parameters$, Result=$result$)]
+		public $type$ $Name$Test($Args$)
+		{
+			Assert.Fail();
+			$end$
+			return default($type$);
+		}]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

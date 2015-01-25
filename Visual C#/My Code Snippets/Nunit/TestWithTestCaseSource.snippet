@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>TestWithTestCaseSource</Title>
+      <Author>Tanabe</Author>
+      <Description>テストソースを使ったテストのひな形．テストケースはプロパティとして定義．</Description>
+      <HelpUrl></HelpUrl>
+      <SnippetTypes />
+      <Keywords />
+      <Shortcut>testcasesource</Shortcut>
+    </Header>
+    <Snippet>
+      <References />
+      <Imports />
+      <Declarations>
+        <Literal Editable="true">
+          <ID>SourceName</ID>
+          <Type></Type>
+          <ToolTip></ToolTip>
+          <Default>Name</Default>
+          <Function></Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>params</ID>
+          <Type></Type>
+          <ToolTip></ToolTip>
+          <Default>params</Default>
+          <Function></Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>expected</ID>
+          <Type></Type>
+          <ToolTip></ToolTip>
+          <Default>10</Default>
+          <Function></Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>type</ID>
+          <Type></Type>
+          <ToolTip></ToolTip>
+          <Default>int</Default>
+          <Function></Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>args</ID>
+          <Type></Type>
+          <ToolTip></ToolTip>
+          <Default>int arg</Default>
+          <Function></Function>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp" Kind="method decl" Delimiter="$"><![CDATA[public static IEnumerable<TestCaseData> Source$SourceName$
+		{
+			get {
+				yield return new TestCaseData($params$).Returns($expected$);
+			}
+		}
+
+		[TestCaseSource("Source$SourceName$")]
+		public $type$ $SourceName$Test($args$)
+		{
+			$end$
+			return default($type$);
+		}]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

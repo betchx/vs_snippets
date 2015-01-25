@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>TestCaseVoid</Title>
+      <Author>Tanabe</Author>
+      <Description>内部でAssertionをする形式のTestCaseを使ったテストメソッドのひな形</Description>
+      <HelpUrl></HelpUrl>
+      <SnippetTypes />
+      <Keywords />
+      <Shortcut>tcm</Shortcut>
+    </Header>
+    <Snippet>
+      <References />
+      <Imports />
+      <Declarations>
+        <Literal Editable="true">
+          <ID>Name</ID>
+          <Type></Type>
+          <ToolTip></ToolTip>
+          <Default>Name</Default>
+          <Function></Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>Args</ID>
+          <Type></Type>
+          <ToolTip></ToolTip>
+          <Default>Args</Default>
+          <Function></Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>parameters</ID>
+          <Type></Type>
+          <ToolTip></ToolTip>
+          <Default>parameters</Default>
+          <Function></Function>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp" Kind="method decl" Delimiter="$"><![CDATA[[TestCase($parameters$)]
+		public void $Name$Test($Args$)
+		{
+			Assert.Fail();
+			$end$
+		}]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

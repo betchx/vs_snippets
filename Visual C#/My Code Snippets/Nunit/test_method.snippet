@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Test</Title>
+      <Author>Tanabe</Author>
+      <Description>NUnitのテスト関数のひな形を作成</Description>
+      <HelpUrl></HelpUrl>
+      <SnippetTypes />
+      <Keywords />
+      <Shortcut>test</Shortcut>
+    </Header>
+    <Snippet>
+      <References />
+      <Imports />
+      <Declarations>
+        <Literal Editable="true">
+          <ID>Name</ID>
+          <Type></Type>
+          <ToolTip>関数名</ToolTip>
+          <Default>Name</Default>
+          <Function></Function>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp" Kind="method decl" Delimiter="$"><![CDATA[[Test]
+        public void $Name$Test()
+        {
+            Assert.Fail();
+            $end$
+        }]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
