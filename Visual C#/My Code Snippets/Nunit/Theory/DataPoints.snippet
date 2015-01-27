@@ -2,35 +2,42 @@
 <CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
   <CodeSnippet Format="1.0.0">
     <Header>
-      <Title>TestCaseData</Title>
+      <Title>DataPointsRedirect</Title>
       <Author>Tanabe</Author>
-      <Description></Description>
+      <Description>別のクラスにあるデータソースを引用してDataPointsを作成する．</Description>
       <HelpUrl></HelpUrl>
       <SnippetTypes />
       <Keywords />
-      <Shortcut>tcd</Shortcut>
+      <Shortcut>dpsr</Shortcut>
     </Header>
     <Snippet>
       <References />
       <Imports />
       <Declarations>
         <Literal Editable="true">
-          <ID>params</ID>
+          <ID>Name</ID>
           <Type></Type>
           <ToolTip></ToolTip>
-          <Default>params</Default>
+          <Default>Name</Default>
           <Function></Function>
         </Literal>
         <Literal Editable="true">
-          <ID>expected</ID>
+          <ID>class</ID>
           <Type></Type>
           <ToolTip></ToolTip>
-          <Default>expected</Default>
+          <Default>class</Default>
           <Function></Function>
         </Literal>
+        <Literal Editable="true">
+          <ID>Type</ID>
+          <Type />
+          <ToolTip />
+          <Default>Type</Default>
+          <Function />
+        </Literal>
       </Declarations>
-      <Code Language="csharp" Kind="method body" Delimiter="$"><![CDATA[yield return new TestCaseData($params$).Returns($expected$);
-                $end$]]></Code>
+      <Code Language="csharp" Kind="method decl" Delimiter="$"><![CDATA[[Datapoints]
+            public IEnumerable<$Type$> $Name$ { get { return $class$.$Name$; } }]]></Code>
     </Snippet>
   </CodeSnippet>
 </CodeSnippets>

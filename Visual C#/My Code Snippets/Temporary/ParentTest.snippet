@@ -2,32 +2,28 @@
 <CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
   <CodeSnippet Format="1.0.0">
     <Header>
-      <Title>Test</Title>
+      <Title>ParentTest</Title>
       <Author>Tanabe</Author>
-      <Description>NUnitのテスト関数のひな形を作成</Description>
+      <Description>子オブジェクトの親が自分であることをチェックする</Description>
       <HelpUrl></HelpUrl>
       <SnippetTypes />
       <Keywords />
-      <Shortcut>test</Shortcut>
+      <Shortcut>pt</Shortcut>
     </Header>
     <Snippet>
       <References />
       <Imports />
       <Declarations>
         <Literal Editable="true">
-          <ID>Name</ID>
-          <Type></Type>
-          <ToolTip>関数名</ToolTip>
-          <Default>Name</Default>
-          <Function></Function>
+          <ID>collection</ID>
+          <Type />
+          <ToolTip />
+          <Default>model</Default>
+          <Function />
         </Literal>
       </Declarations>
-      <Code Language="csharp" Kind="method decl" Delimiter="$"><![CDATA[[Test]
-        public void $Name$Test()
-        {
-            Assert.Fail("$Name$Test");
-
-        $end$]]></Code>
+      <Code Language="csharp" Kind="" Delimiter="$"><![CDATA[$collection$.ForEach( kv => Assert.AreSame( $collection$, kv.Value.parent) );
+$end$]]></Code>
     </Snippet>
   </CodeSnippet>
 </CodeSnippets>
