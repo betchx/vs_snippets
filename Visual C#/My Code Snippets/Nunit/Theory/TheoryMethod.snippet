@@ -4,7 +4,7 @@
     <Header>
       <Title>TheoryMethod</Title>
       <Author>Tanabe</Author>
-      <Description></Description>
+      <Description>Theoryによるテストのひな形</Description>
       <HelpUrl></HelpUrl>
       <SnippetTypes />
       <Keywords />
@@ -28,13 +28,55 @@
           <Default>args</Default>
           <Function></Function>
         </Literal>
+        <Literal Editable="true">
+          <ID>assumption</ID>
+          <Type></Type>
+          <ToolTip></ToolTip>
+          <Default>assumption</Default>
+          <Function></Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>obj</ID>
+          <Type></Type>
+          <ToolTip></ToolTip>
+          <Default>obj</Default>
+          <Function></Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>Constraints</ID>
+          <Type></Type>
+          <ToolTip></ToolTip>
+          <Default>Is.a</Default>
+          <Function></Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>type</ID>
+          <Type></Type>
+          <ToolTip></ToolTip>
+          <Default>type</Default>
+          <Function></Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>close</ID>
+          <Type></Type>
+          <ToolTip></ToolTip>
+          <Default>close</Default>
+          <Function></Function>
+        </Literal>
       </Declarations>
       <Code Language="csharp" Kind="method decl" Delimiter="$"><![CDATA[[Theory]
-public void $Name$($args$){
-Assert.Fail();
-
+public void $Name$($type$  $args$){
+// Assumptions
+Assume.That($args$, Is.Not.Null);
+Assume.That($assumption$);
+// check that assumption is valid
+Assert.Fail($args$);
+// Work
 $end$
-]]></Code>
+
+// Assertions
+Assert.That($obj$, $Constraints$);
+$close$]]></Code>
     </Snippet>
   </CodeSnippet>
 </CodeSnippets>
