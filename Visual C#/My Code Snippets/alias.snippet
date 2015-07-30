@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>alias</Title>
+      <Author>Atsushi TANABE</Author>
+      <Description>Add read only property of a field or another property.</Description>
+      <HelpUrl></HelpUrl>
+      <SnippetTypes />
+      <Keywords />
+      <Shortcut>alias</Shortcut>
+    </Header>
+    <Snippet>
+      <References />
+      <Imports />
+      <Declarations>
+        <Literal Editable="true">
+          <ID>int</ID>
+          <Type />
+          <ToolTip />
+          <Default>int</Default>
+          <Function />
+        </Literal>
+        <Literal Editable="true">
+          <ID>NewName</ID>
+          <Type />
+          <ToolTip />
+          <Default>NewName</Default>
+          <Function />
+        </Literal>
+        <Literal Editable="true">
+          <ID>original</ID>
+          <Type />
+          <ToolTip />
+          <Default>original</Default>
+          <Function />
+        </Literal>
+      </Declarations>
+      <Code Language="csharp" Kind="method decl" Delimiter="$"><![CDATA[public $int$ $NewName$ { get { return $original$;} }
+$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
